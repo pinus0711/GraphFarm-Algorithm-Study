@@ -46,13 +46,13 @@
     <td align="center"><a href="https://github.com/KyuliLee"><img src="https://avatars.githubusercontent.com/KyuliLee" width="130px;" alt=""></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/mins-n"><b>MinSun-Kim</b></a></td>
-    <td align="center"><a href="https://github.com/mnjihwan"><b>JiHwan-Moon</b></a></td>
-    <td align="center"><a href="https://github.com/jasonpark112"><b>JiHo-Park</b></a></td>
-    <td align="center"><a href="https://github.com/sws6641"><b>WonSeop-Song</b></a></td>
-    <td align="center"><a href="https://github.com/Cnythnk100"><b>SeungMin-Shin</b></a></td>
-    <td align="center"><a href="https://github.com/pinus0711"><b>YiSol-Yoon</b></a></td>
-    <td align="center"><a href="https://github.com/KyuliLee"><b>KyuLi-Lee</b></a></td>
+    <td align="center"><a href="https://github.com/mins-n"><b>김민선/b></a></td>
+    <td align="center"><a href="https://github.com/mnjihwan"><b>문지환</b></a></td>
+    <td align="center"><a href="https://github.com/jasonpark112"><b>박지호</b></a></td>
+    <td align="center"><a href="https://github.com/sws6641"><b>송원섭</b></a></td>
+    <td align="center"><a href="https://github.com/Cnythnk100"><b>신승민</b></a></td>
+    <td align="center"><a href="https://github.com/pinus0711"><b>윤이솔/b></a></td>
+    <td align="center"><a href="https://github.com/KyuliLee"><b>이규리</b></a></td>
   </tr>
   <tr> 
     <td align="center"><img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"></td>
