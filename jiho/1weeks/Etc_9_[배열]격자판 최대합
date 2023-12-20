@@ -110,4 +110,4 @@ class Main {
         }
         System.out.println(T.solution(arr, n));
     }
-}
+} 
