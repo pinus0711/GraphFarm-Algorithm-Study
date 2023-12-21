@@ -1,3 +1,5 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/118666
+
 class Solution {
     public String solution(String[] survey, int[] choices) {
         String answer = "";
