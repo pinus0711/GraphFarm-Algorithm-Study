@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Main {
+
+    public int solution(int tsn, int stn, int[][] arr) {
+        int answer = 0;
+        for (int i = 1; i <= stn; i++) {
+            for (int j = 1; j <= stn; j++) {
+                int cnt = 0;
+                for (int k = 0; k < tsn; k++) {
+                    int pi = 0, pj = 0;
+                    for (int l = 0; l < stn; l++) {
+                        if (arr[k][l] == i) pi = l;
+                        if (arr[k][l] == j) pj = l;
+                    }
+                    if (pi < pj) cnt++;
+                }
+                if (cnt == tsn) answer++;
+            }
+        }
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Main T = new Main();
+        Scanner in = new Scanner(System.in);
+        int stn = in.nextInt();
+        int tsn = in.nextInt();
+        int[][] arr = new int[tsn][stn];
+        for (int i = 0; i < tsn; i++) {
+            for (int j = 0; j < stn; j++) {
+                arr[i][j] = in.nextInt();
+            }
+        }
+
+        System.out.println(T.solution(tsn, stn, arr));
+
+    }
+}
