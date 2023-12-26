@@ -1,5 +1,3 @@
-// https://school.programmers.co.kr/learn/courses/30/lessons/150370#
-
 import java.util.*;
 
 class Solution {
@@ -73,7 +71,7 @@ class Solution {
             collectedDateArr[0]++;
         }
         
-        // today의 연/월/일과 collectedDate의 연/월/일을 각각 비교하며 boolean형 return
+        // today의 연/월/일과 collectedDate의 연/월/일을 각각 비교하며 boolean형을 return
         if (collectedDateArr[0] < todayArr[0]) return true;
         
         else if ((collectedDateArr[0] == todayArr[0]) &&
@@ -81,11 +79,7 @@ class Solution {
         
         else if ((collectedDateArr[0] == todayArr[0]) &&
                  (collectedDateArr[1] == todayArr[1]) &&
-                 (collectedDateArr[2] < todayArr[2])) return true;
-        
-        else if ((collectedDateArr[0] == todayArr[0]) &&
-                 (collectedDateArr[1] == todayArr[1]) &&
-                 (collectedDateArr[2] == todayArr[2])) return true;
+                 (collectedDateArr[2] <= todayArr[2])) return true;
         
         else return false;
     }
