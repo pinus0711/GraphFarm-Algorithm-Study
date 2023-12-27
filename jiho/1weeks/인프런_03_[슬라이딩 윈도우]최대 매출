@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Main {
+
+    public int solution(int N, int K, int[] arr) {
+       int answer = 0, sum = 0;
+       for(int i = 0; i < K; i++) sum += arr[i];
+       answer = sum;
+       for(int j = K; j < N; j++) {
+          sum  = sum + arr[j] - arr[j - K];
+          answer = Math.max(answer, sum);
+       }
+       return answer;
+    }
+
+
+
+    public static void main(String[] args) {
+        Main T = new Main();
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        int K = in.nextInt();
+
+        int[] arr = new int[N];
+        for(int i = 0; i < N; i++) {
+            arr[i] = in.nextInt();
+        }
+        System.out.print(T.solution(N, K, arr));
+    }
+}
