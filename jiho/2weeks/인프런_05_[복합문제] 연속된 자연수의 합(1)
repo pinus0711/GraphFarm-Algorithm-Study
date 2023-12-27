@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Main {
+
+    public int solution(int n) {
+        int lt = 1, sum = 0;
+        int answer = 0;
+        for(int rt = 1; rt < n; rt++) {
+            sum += rt;
+            while (sum >= n) {
+                if (sum == n) {
+                    answer++;
+                    sum -= lt++;
+                } else if(sum > n) sum -= lt++;
+            }
+        }
+
+        return answer;
+
+    }
+
+
+
+    public static void main(String[] args) {
+        Main T = new Main();
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        System.out.print(T.solution(n));
+    }
+}
