@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Solution {
+    public String[] solution(String myStr) {
+        ArrayList<String> list=new ArrayList<>();
+        String temp="";
+        for(char c:myStr.toCharArray()){
+            if(c=='a'||c=='b'||c=='c'){
+                if(temp!="")list.add(temp);
+                temp="";
+            }else{
+                temp+=c;
+            }
+            
+        }
+        if(temp!="")list.add(temp);
+        if(list.isEmpty())list.add("EMPTY");
+        String[] answer=list.toArray(new String[list.size()]); 
+        return answer;
+    }
+}
