@@ -1,0 +1,32 @@
+import java.util.*;
+
+class Main {
+
+    public int solution(String str, String target) {
+      int answer = 0;
+      HashMap<Character, Integer> am = new HashMap<>();
+      HashMap<Character, Integer> bm = new HashMap<>();
+      for (char x : target.toCharArray()) am.put(x, am.getOrDefault(x, 0) + 1);
+      int L = target.length() - 1;
+      for (int i = 0; i < L; i++) bm.put(str.charAt(i), bm.getOrDefault(str.charAt(i), 0) + 1);
+      int lt = 0;
+        for (int rt = L; rt < str.length(); rt++) {
+            bm.put(str.charAt(rt), bm.getOrDefault(str.charAt(rt), 0) + 1);
+            if (bm.equals(am)) answer++;
+            bm.put(str.charAt(lt), bm.get(str.charAt(lt)) - 1);
+            if (bm.get(str.charAt(lt)) == 0) bm.remove(str.charAt(lt));
+            lt++;
+        }
+        return answer;
+    }
+
+
+    public static void main(String[] args ){
+        Main T = new Main();
+        Scanner in = new Scanner(System.in);
+        String str = in.next();
+        String target = in.next();
+
+        System.out.println(T.solution(str, target));
+    }
+}
