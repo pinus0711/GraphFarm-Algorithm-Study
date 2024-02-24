@@ -1,0 +1,63 @@
+package ch10;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class baekjun {
+	
+	static int N;
+	static int[][] graph;
+	static int cnt;
+	static int[] dx= {1,-1,0,0};
+	static int[] dy= {0,0,1,-1};
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Integer> array=new ArrayList<>();
+        
+        N = Integer.parseInt(bf.readLine());
+        
+        
+        graph=new int[N][N];
+        
+        for(int i=0; i<N; i++){
+            String str = bf.readLine();
+            for(int j=0; j<N; j++){
+                graph[i][j] = str.charAt(j) - '0';
+            }
+        }
+        
+        for(int i=0;i<N;i++) {
+        	for(int j=0;j<N;j++) {
+        		cnt=0;
+        		if(graph[i][j]==1) {
+        			dfs(i,j);
+        			array.add(cnt);
+        		}
+        	}
+        }
+        System.out.println(array.size());
+        for(int i:array) {
+        	System.out.println(i);
+        }
+	}
+	
+
+	static void dfs(int w,int h) {
+		graph[w][h]=0;
+		cnt++;
+		for(int i=0;i<4;i++) {
+			int cw=w+dx[i];
+			int ch=h+dy[i];
+			
+			if(cw>=0&&ch>=0&&ch<N&&cw<N&&graph[cw][ch]==1) {
+				dfs(cw,ch);
+			}
+		}
+		
+
+	}
+}
