@@ -33,7 +33,7 @@ class Solution {
         // value 기준으로 정렬
         List<Integer> keys = new ArrayList<>(map.keySet());
         
-		Collections.sort(keys, (o1, o2) -> (map.get(o2).compareTo(map.get(o1))));
+		    Collections.sort(keys, (o1, o2) -> (map.get(o2).compareTo(map.get(o1))));
         
         int[] result = keys.stream().mapToInt(Integer::intValue).toArray();
         
