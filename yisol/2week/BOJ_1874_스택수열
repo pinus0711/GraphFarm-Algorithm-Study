@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        ArrayList<String> ans=new ArrayList<>();
+        
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        Stack<Integer> origin=new Stack<>();
+        
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int cnt=0;
+        for(int x=1;x<n+1;x++){
+            origin.push(x);
+            ans.add("+");
+            while(!origin.empty()&&origin.peek()==arr[cnt]){
+                origin.pop();
+                ans.add("-");
+                cnt++;
+            }
+        }
+       if(origin.empty()){
+           for(String s:ans){
+               System.out.println(s);
+           }
+       }else System.out.println("NO");
+        
+    }
+}
