@@ -1,0 +1,28 @@
+OrDefault(map.get(arr[rt]), 0) - 1);
+            if(map.size() > target.length() || map.get(arr[rt]) < 0) {
+                lt++;
+                rt = lt + 1;
+                map.clear();
+                continue;
+            }
+            if(rt == lt + str.length() - 1) {
+                count++;
+                lt++;
+                rt = lt + 1;
+                map.clear();
+            }
+        }
+
+        return count;
+    }
+
+
+    public static void main(String[] args ){
+        Main T = new Main();
+        Scanner in = new Scanner(System.in);
+        String str = in.next();
+        String target = in.next();
+
+        System.out.println(T.solution(str, target));
+    }
+}
